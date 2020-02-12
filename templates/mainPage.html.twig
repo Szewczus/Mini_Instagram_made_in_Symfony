@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mini Instagram{% endblock %}
+
+{% block body %}
+
+    <div class="text-center">
+        <h3>Witaj na moim Mini Instagramie</h3>
+    </div>
+    <div class="text-center">
+        Stronka jest przeznaczona do wstawiania obrazków na strone moje Konto<br>
+        Aby móc wstawiać swoje własne materiały zaloguj się <a href={{ path('app_login') }} >tutaj</a><br>
+        Jeśli jeszcze nie masz konta zarejestruj się <a href={{ path('rejestracja') }}>tutaj</a><br>
+        <img src="{{ asset('obrazek/png-kot-obrazek-511.png') }}" alt="" class="img-fluid">
+    </div>
+
+    <div class="mx-auto" style="width: 700px;"></div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% if element == "anonim" %}
+        <h3>nie jestes zalogowany, najpierw zaloguj sie <a href={{ path('app_login') }}>tutaj</a></h3>
+    {% else %}
+
+        {% if file == 1 %}
+            <div class="text-center">
+            <h2>Zdjęcia {{ element }}:</h2>
+            </div>
+            {% for zdjatko in tab[2:] %}
+                <img src="{{ asset(zdjatko) }}" alt="zdjatko" width="500px">
+            {% endfor %}
+        {% elseif file ==0 %}
+            <h3>nie ma zadnych zdjec</h3>
+        {% endif %}
+    {% endif %}
+{% endblock %}

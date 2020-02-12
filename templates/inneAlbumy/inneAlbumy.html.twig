@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}inne albumy{% endblock %}
+{%  block body %}
+    {% if massage == 1 %}
+    <form action={{ url('przeslijUsername') }} method="POST" enctype="multipart/form-data">
+        <b>Wyświetl album użytkownika:</b>
+        <select name="element">
+            {% for element in dane %}
+                <option name="element">{{ element }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Wyświetl" name="submit">
+    </form>
+    {% elseif massage ==0 %}
+        <h3>nie jestes zalogowany, najpierw zaloguj sie <a href={{ path('app_login') }}>tutaj</a></h3>
+    {% endif %}
+
+
+{% endblock %}

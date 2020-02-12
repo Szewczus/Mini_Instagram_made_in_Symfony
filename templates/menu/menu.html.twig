@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark md-3">
+    <div class="container">
+        <a href="/" class="navbar-brand">Mini Instagram</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mobile-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href={{ path('mainPage') }} class="nav-link">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a href={{ path('app_login') }} class="nav-link">Zaloguj</a>
+                </li>
+                <li class="nav-item">
+                    <a href={{ path('rejestracja') }} class="nav-link">Zarejestruj</a>
+                </li>
+                <li class="nav-item">
+                    <a href={{ path('mojeKonto') }} class="nav-link">Moje Konto</a>
+                </li>
+                <li class="nav-item">
+                    <a href={{ path('inneAlbumy') }} class="nav-link">Inne Albumy</a>
+                </li>
+                <li class="nav-item">
+                    <a href={{ path('app_logout') }} class="nav-link">Wyloguj</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
